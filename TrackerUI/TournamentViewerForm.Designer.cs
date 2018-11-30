@@ -40,6 +40,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -80,6 +82,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.AccessibleName = "roundDropdown";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(175, 130);
             this.comboBox1.Name = "comboBox1";
@@ -148,7 +151,7 @@
             // textBox2
             // 
             this.textBox2.AccessibleName = "teamTwoScoreText";
-            this.textBox2.Location = new System.Drawing.Point(640, 449);
+            this.textBox2.Location = new System.Drawing.Point(627, 507);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 50);
             this.textBox2.TabIndex = 11;
@@ -160,7 +163,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(523, 449);
+            this.label6.Location = new System.Drawing.Point(510, 507);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 54);
             this.label6.TabIndex = 10;
@@ -174,12 +177,40 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(510, 395);
+            this.label7.Location = new System.Drawing.Point(497, 453);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(251, 54);
             this.label7.TabIndex = 9;
             this.label7.Text = "<Team Two>";
             this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label8
+            // 
+            this.label8.AccessibleName = "versusLabel";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label8.Location = new System.Drawing.Point(497, 399);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(101, 54);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "-VS-";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // button1
+            // 
+            this.button1.AccessibleName = "scoreButton";
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Location = new System.Drawing.Point(782, 389);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 64);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Score";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // TournamentViewerForm
             // 
@@ -187,7 +218,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 45F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(924, 641);
+            this.ClientSize = new System.Drawing.Size(958, 641);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -223,6 +256,8 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button1;
     }
 }
 
