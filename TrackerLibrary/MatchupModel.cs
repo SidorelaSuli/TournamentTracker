@@ -19,7 +19,7 @@ namespace TrackerLibrary
         /// <summary>
         /// The set of teams that were involved in this match
         /// </summary>
-        public List<MatchupEntryModel> Enteries { get; set; } = new List<MatchupEntryModel>();
+        public List<MatchupEntryModel> Entries { get; set; } = new List<MatchupEntryModel>();
 
         /// <summary>
         /// The winner of the match
