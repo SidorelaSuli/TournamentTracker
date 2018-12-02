@@ -19,19 +19,20 @@ namespace TrackerLibrary
         // the user has the option to save in a database of a text file or text files
         // declare getters and setters and initialize list
 
-        public static List<IDataConnection> connections { get; private set; } = new List<IDataConnection>();
-        public static void InitializeConnections(bool database, bool textFiles)
+        public static IDataConnection Connection { get; private set; }
+        public static void InitializeConnections(DatabaseType db)
         {
-            if (database)
+            if (db == DatabaseType.Sql)
             {
-                SqlConnector sql = new SqlConnector();
-                connections.Add(sql);
+                // TODO - Set up the SQL Connector properly
+                SqlConnector sqlConn = new SqlConnector();
+                Connection = sqlConn;
             }
-
-            if (textFiles)
+            else if (db == DatabaseType.TextFile)
             {
-                TextConnector text = new TextConnector();
-                connections.Add(text);
+                // TODO - create the text file connection
+                TextConnector textFileConn = new TextConnector();
+                Connection = textFileConn;
             }
         }
 
