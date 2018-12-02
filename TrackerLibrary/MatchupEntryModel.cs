@@ -9,10 +9,14 @@ namespace TrackerLibrary
     public class MatchupEntryModel
     {
         /// <summary>
-        /// Represents one team in the matchup
-        /// --xml comments
+        /// Unique identifier of a matchup entry
         /// </summary>
-        public TeamModel TeamCompiting { get; set; }
+        public int Id { get; set; }
+
+        /// <summary>
+        /// Represents one team in the matchup
+        /// </summary>
+        public TeamModel TeamCompeting { get; set; }
 
         /// <summary>
         /// Represents the score for this particular team
@@ -20,8 +24,7 @@ namespace TrackerLibrary
         public double Score { get; set; }
 
         /// <summary>
-        /// Represents the matchup that this team 
-        /// came from the winner
+        /// Represents the matchup that this team came from as the winner
         /// </summary>
         public MatchupModel ParentMatchup { get; set; }
     }

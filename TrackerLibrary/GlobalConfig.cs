@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrackerLibrary;
 
 namespace TrackerLibrary
 {
@@ -22,6 +24,16 @@ namespace TrackerLibrary
                 TextConnector text = new TextConnector();
                 connections.Add(text);
             }
+        }
+
+        /// <summary>
+        /// return the value of the connectionString attribute from the <connectionStrings> tag of App.config
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public static string CnnString(string name)
+        {
+            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
     }
 }
